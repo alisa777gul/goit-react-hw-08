@@ -21,7 +21,7 @@ export default function HomePage() {
         </li>
       </ul>
       <p>
-        Whether you're managing personal or professional contacts, this app
+        Whether youre managing personal or professional contacts, this app
         provides an easy-to-use and secure solution. Start managing your
         contacts today!
       </p>

@@ -1,10 +1,10 @@
-import { FaMoon, FaSun } from 'react-icons/fa'; // Import icons
+import { FaMoon, FaSun } from 'react-icons/fa';
 import css from './ThemeToggle.module.css';
 
 const ThemeToggle = ({ currentTheme, setCurrentTheme }) => {
   const handleThemeToggle = () => {
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-    setCurrentTheme(newTheme); // Toggle theme state
+    setCurrentTheme(newTheme);
   };
 
   return (

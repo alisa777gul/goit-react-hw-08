@@ -9,7 +9,7 @@ export const Layout = ({ children }) => {
 
   useEffect(() => {
     document.body.setAttribute('data-theme', currentTheme);
-    localStorage.setItem('theme', currentTheme); // Save the theme to localStorage
+    localStorage.setItem('theme', currentTheme);
   }, [currentTheme]);
 
   return (

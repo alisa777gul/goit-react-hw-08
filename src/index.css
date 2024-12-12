@@ -50,7 +50,7 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Input field styling */
+
 .input {
   background-color: var(--input-background-color);
   border: 2px solid var(--border-color);
@@ -68,7 +68,7 @@ button:hover {
   box-shadow: 0 0 5px var(--highlight-color);
 }
 
-/* Label styling */
+
 .label {
   font-size: 16px;
   margin-bottom: 6px;
@@ -79,7 +79,7 @@ p {
   color: black;
 }
 
-/* Error message styling */
+
 .error {
   color: var(--error-color);
   font-size: 12px;

@@ -8,6 +8,7 @@ import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { Layout } from './Layout';
 import { refreshUser } from '../redux/auth/operations';
+import { Toaster } from 'react-hot-toast';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
@@ -26,6 +27,26 @@ function App() {
     <b>Refreshing User...</b>
   ) : (
     <Suspense fallback={<div>Loading...</div>}>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+        toastOptions={{
+          className: '',
+          duration: 5000,
+          style: {
+            background: '#fff',
+            color: '#000',
+          },
+
+          success: {
+            duration: 3000,
+            theme: {
+              primary: 'green',
+              secondary: 'white',
+            },
+          },
+        }}
+      />
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />

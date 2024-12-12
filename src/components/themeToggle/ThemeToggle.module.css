@@ -3,7 +3,7 @@
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--text-color); /* Иконка будет менять цвет в зависимости от темы */
+  color: var(--text-color);
   transition: color 0.3s ease, transform 0.3s ease;
   display: flex;
   justify-content: center;
@@ -12,14 +12,14 @@
 
 .toggleBtn:hover {
   background-color: transparent;
-  color: #ff4081; /* Цвет иконки при наведении */
+  color: #ff4081;
   box-shadow: none;
-  transform: scale(1.1); /* Увеличение иконки при наведении */
+  transform: scale(1.1);
 }
 
 .toggleBtn:focus {
   box-shadow: none;
   background-color: transparent;
-  outline: none; /* Убираем стандартное обрамление при фокусе */
-  color: #ff4081; /* Цвет иконки при фокусе */
+  outline: none;
+  color: #ff4081;
 }

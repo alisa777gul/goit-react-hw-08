@@ -3,11 +3,15 @@ import { IoPerson } from 'react-icons/io5';
 import { IoCall } from 'react-icons/io5';
 import { useDispatch } from 'react-redux';
 import { deleteContact } from '../../redux/contacts/operations';
+import toast from 'react-hot-toast';
 
 export default function Contact({ contact }) {
   const dispatch = useDispatch();
 
-  const handleDelete = () => dispatch(deleteContact(contact.id));
+  const handleDelete = () =>
+    dispatch(deleteContact(contact.id)).unwrap.then(
+      toast.success('Contact was deleted!')
+    );
 
   return (
     <>

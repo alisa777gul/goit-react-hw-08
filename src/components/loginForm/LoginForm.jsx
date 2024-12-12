@@ -4,6 +4,7 @@ import { Field, Form, Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import style from './LoginForm.module.css';
 import { useId } from 'react';
+import toast from 'react-hot-toast';
 
 export default function LoginForm() {
   const dispatch = useDispatch();
@@ -12,10 +13,10 @@ export default function LoginForm() {
     dispatch(login(values))
       .unwrap()
       .then(() => {
-        console.log('Successfully logged in');
+        toast.success('Successfully logged in!');
       })
       .catch(() => {
-        console.error('Login error');
+        toast.error('Try again...');
       });
     resetForm();
   };
@@ -52,6 +53,7 @@ export default function LoginForm() {
               id={emailFieldId}
               placeholder="alex2939@mail.com"
             />
+
             <ErrorMessage
               name="email"
               component="div"

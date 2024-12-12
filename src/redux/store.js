@@ -7,21 +7,18 @@ import { persistReducer } from 'redux-persist';
 import { authReducer } from './auth/slice';
 import { persistStore } from 'redux-persist';
 
-// Persist configuration for auth reducer
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'], // Only persist the token, not the whole state
+  whitelist: ['token'],
 };
 
-// Configure the store
 export const store = configureStore({
   reducer: {
-    auth: persistReducer(authPersistConfig, authReducer), // Persist the auth reducer
+    auth: persistReducer(authPersistConfig, authReducer),
     contacts: contactsReducer,
     filters: filtersReducer,
   },
 });
 
-// Create and export the persistor for redux-persist
 export const persistor = persistStore(store);

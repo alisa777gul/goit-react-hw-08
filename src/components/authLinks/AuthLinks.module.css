@@ -1,11 +1,11 @@
-/* Link Styles */
+
 .link {
   display: flex;
   text-align: center;
   text-decoration: none;
   padding: 5px;
   font-weight: 700;
-  color: #ff4081; /* Soft blue for normal state */
+  color: #ff4081; 
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
@@ -17,17 +17,17 @@
 }
 
 .link:hover {
-  color: #e84a5f; /* Active hover color */
+  color: #e84a5f; 
 }
 
 .link.active {
-  color: #e84a5f; /* Active color */
+  color: #e84a5f; 
 }
 
 @media (max-width: 768px) {
   .link {
     padding: 10px;
-    font-size: 1rem; /* Adjust font size for mobile */
+    font-size: 1rem; 
   }
 }
 
