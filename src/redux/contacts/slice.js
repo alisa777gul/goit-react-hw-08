@@ -5,7 +5,7 @@ import {
   deleteContact,
 } from '../contacts/operations';
 
-import { selectNameFilter } from '../filters/slice';
+import { selectFilter } from '../filters/slice';
 
 const handlePending = state => {
   state.isLoading = true;
@@ -57,11 +57,15 @@ const slice = createSlice({
 export const selectContacts = state => state.contacts.items;
 
 export const selectFilteredContacts = createSelector(
-  [selectContacts, selectNameFilter],
-  (contacts, filter) => {
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(filter.toLowerCase())
-    );
+  [selectContacts, selectFilter],
+  (contacts, query) => {
+    return contacts.filter(contact => {
+      const queryLowerCase = query.toLowerCase();
+      return (
+        contact.name.toLowerCase().includes(queryLowerCase) ||
+        contact.number.toLowerCase().includes(queryLowerCase)
+      );
+    });
   }
 );
 
