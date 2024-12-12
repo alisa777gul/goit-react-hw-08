@@ -33,7 +33,6 @@
 @media (max-width: 320px) {
   .layout {
     width: 100%;
-    padding: 10px;
   }
 
   .layoutContent {
@@ -44,7 +43,6 @@
 @media (max-width: 768px) {
   .layout {
     width: 100%;
-    padding: 16px;
   }
 
   .layoutContent {
@@ -55,7 +53,6 @@
 @media (max-width: 1220px) {
   .layout {
     width: 80%;
-    padding: 24px;
   }
 
   .layoutContent {
@@ -66,7 +63,6 @@
 @media (min-width: 1221px) {
   .layout {
     width: 60%;
-    padding: 32px;
   }
 
   .layoutContent {
