@@ -50,23 +50,6 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Form container styling */
-.form {
-  background: var(--form-bg-color);
-  border: 2px solid var(--border-color);
-  border-radius: 12px;
-  padding: 24px;
-  width: 100%;
-  max-width: 380px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 18px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-}
-
 /* Input field styling */
 .input {
   background-color: var(--input-background-color);
@@ -90,6 +73,10 @@ button:hover {
   font-size: 16px;
   margin-bottom: 6px;
   color: var(--primary-text-color);
+}
+
+p {
+  color: black;
 }
 
 /* Error message styling */
@@ -130,6 +117,10 @@ button:hover {
 [data-theme='dark'] .input {
   background-color: var(--input-background-color);
   color: var(--input-text-color);
+}
+
+[data-theme='dark'] p {
+  color: #ffffff;
 }
 
 [data-theme='dark'] a {

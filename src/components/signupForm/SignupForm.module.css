@@ -1,9 +1,11 @@
+/* Error message styling */
 .error {
   color: red;
   font-size: 12px;
   margin-top: 4px;
 }
 
+/* Form container styling */
 .form {
   border: 2px solid #ff4081;
   border-radius: 6px;
@@ -12,29 +14,39 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-
   align-items: center;
   flex-direction: column;
   margin: 0 auto;
   gap: 16px;
+  box-sizing: border-box; /* Ensures padding doesn't affect width */
 }
 
+/* Input field styling */
 .input {
   border-radius: 6px;
   width: 100%;
   padding: 12px;
+  box-sizing: border-box; /* Ensures padding doesn't overflow */
 }
 
+/* Label styling */
 .label {
   font-size: 16px;
   margin-bottom: 4px;
 }
 
+/* Box container for each input field */
 .boxInput {
   display: flex;
   flex-direction: column;
   align-items: start;
+  width: 100%; /* Ensures input fields take up full width of the form */
 }
+
+/* Title styling */
 .title {
   margin-bottom: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-text-color);
 }
