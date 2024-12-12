@@ -13,14 +13,15 @@
   display: flex;
   justify-content: center;
 
-  align-items: start;
+  align-items: center;
   flex-direction: column;
+  margin: 0 auto;
   gap: 16px;
 }
 
 .input {
   border-radius: 6px;
-
+  width: 100%;
   padding: 12px;
 }
 
@@ -33,4 +34,7 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+.title {
+  margin-bottom: 0;
 }

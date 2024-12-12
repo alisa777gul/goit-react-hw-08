@@ -12,8 +12,8 @@
   padding: 20px;
   display: flex;
   justify-content: center;
-
-  align-items: start;
+  margin: 0 auto;
+  align-items: center;
   flex-direction: column;
   gap: 16px;
 }
@@ -33,4 +33,8 @@
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+
+.title {
+  margin-bottom: 0;
 }

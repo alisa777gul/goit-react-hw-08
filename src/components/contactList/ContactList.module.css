@@ -1,7 +1,7 @@
 .element {
   display: flex;
   flex-direction: row;
-  border: 2px solid black;
+  border: 2px solid #ff4081;
   border-radius: 6px;
   padding-left: 10px;
   padding-bottom: 10px;

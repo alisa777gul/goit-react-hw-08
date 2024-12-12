@@ -1,0 +1,39 @@
+/* Link Styles */
+.link {
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  padding: 5px;
+  font-weight: 700;
+  color: #ff4081; /* Soft blue for normal state */
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.auth {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.link:hover {
+  color: #e84a5f; /* Active hover color */
+}
+
+.link.active {
+  color: #e84a5f; /* Active color */
+}
+
+@media (max-width: 768px) {
+  .link {
+    padding: 10px;
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+}
+
+@media (min-width: 1220px) {
+  .link {
+    padding: 12px 20px;
+    font-size: 1.2rem;
+  }
+}
