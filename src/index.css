@@ -1,0 +1,95 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #eecce1;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  overflow-x: hidden;
+}
+
+a {
+  font-weight: 500;
+  color: #a3a5be;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #a032aa;
+}
+
+input {
+  background-color: #ffffff;
+  font-size: 16px;
+}
+
+body {
+  color: black;
+  margin: 0;
+  display: flex;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid #9f9fad;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: #000000;
+  cursor: pointer;
+  transition: border-color 0.25s, background-color 0.25s;
+  margin-right: 8px;
+}
+button:hover {
+  border-color: #000000;
+  background-color: #fdffea;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input {
+  outline: white;
+}
+
+input:hover {
+  border: 2px solid #9f9fad;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #eaebc4;
+  }
+  a:hover {
+    color: #213547;
+  }
+  button {
+    background-color: #f1ecec;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+}

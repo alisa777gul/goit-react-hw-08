@@ -1,0 +1,16 @@
+.box {
+  margin-top: 20px;
+}
+
+.name {
+  font-size: 20px;
+  margin-bottom: 12px;
+}
+
+.input {
+  border-radius: 6px;
+  width: 180px;
+  display: flex;
+  padding: 12px;
+  margin-bottom: 16px;
+}
