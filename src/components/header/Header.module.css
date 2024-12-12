@@ -1,14 +1,18 @@
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  background-color: var(--primary-bg); /* Set primary background color here */
-  padding: 16px 20px;
-  height: 60px;
+  background-color: inherit; /* Set primary background color here */
+  padding: 10px 10px;
+  height: 50px;
   box-sizing: border-box;
   transition: background-color 0.3s ease;
   width: 100%;
   border-bottom: 1px #ff4081 solid;
+  z-index: 8888;
+
+  left: 0;
+  top: 0;
 }
 
 .nav {
