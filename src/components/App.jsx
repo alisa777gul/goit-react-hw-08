@@ -25,7 +25,9 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <Loader />
+    <Layout>
+      <Loader />
+    </Layout>
   ) : (
     <Suspense fallback={<Loader />}>
       <Toaster
