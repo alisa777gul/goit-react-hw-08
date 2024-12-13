@@ -9,6 +9,7 @@ import { PrivateRoute } from './PrivateRoute';
 import { Layout } from './Layout';
 import { refreshUser } from '../redux/auth/operations';
 import { Toaster } from 'react-hot-toast';
+import Loader from './loader/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const RegisterPage = lazy(() => import('../pages/RegisterPage'));
@@ -24,7 +25,7 @@ function App() {
   }, [dispatch]);
 
   return isRefreshing ? (
-    <b>Refreshing User...</b>
+    <Loader />
   ) : (
     <Suspense fallback={<div>Loading...</div>}>
       <Toaster
