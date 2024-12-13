@@ -31,7 +31,7 @@ export default function ContactForm() {
   const FeedbackSchema = Yup.object().shape({
     name: Yup.string()
       .min(2, 'Too Short!')
-      .max(50, 'Too Long!')
+      .max(30, 'Too Long!')
       .required('Required'),
     number: Yup.string()
       .min(10, 'Too Short!')
