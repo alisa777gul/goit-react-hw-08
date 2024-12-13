@@ -1,19 +1,19 @@
 import { useSelector } from 'react-redux';
 import { selectIsLoggedIn } from '../../redux/auth/selectors';
 import { AuthNav } from '../authLinks/AuthNav';
-import { User } from '../user/User';
+import { UserMenu } from '../userMenu/UserMenu';
 
-import css from './Header.module.css';
+import css from './AppBar.module.css';
 import ThemeToggle from '../themeToggle/ThemeToggle';
 import { Navigation } from '../navigation/Navigation';
 
-export default function Header({ setCurrentTheme, currentTheme }) {
+export default function AppBar({ setCurrentTheme, currentTheme }) {
   const isLoggedIn = useSelector(selectIsLoggedIn);
 
   return (
     <header className={css.header}>
       <Navigation />
-      {isLoggedIn ? <User /> : <AuthNav />}
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
       <ThemeToggle
         currentTheme={currentTheme}
         setCurrentTheme={setCurrentTheme}

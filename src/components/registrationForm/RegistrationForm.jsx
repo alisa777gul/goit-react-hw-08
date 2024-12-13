@@ -2,11 +2,11 @@ import { useDispatch } from 'react-redux';
 import { register } from '../../redux/auth/operations';
 import { Field, Form, Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
-import style from './SignupForm.module.css';
+import style from './RegistrationForm.module.css';
 import { useId } from 'react';
 import toast from 'react-hot-toast';
 
-export default function SignupForm() {
+export default function RegistrationForm() {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {

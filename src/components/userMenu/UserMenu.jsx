@@ -1,11 +1,11 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { logout } from '../../redux/auth/operations';
+import { logOut } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selectors';
 import { FaSignOutAlt } from 'react-icons/fa';
-import css from './User.module.css';
+import css from './UserMenu.module.css';
 import toast from 'react-hot-toast';
 
-export const User = () => {
+export const UserMenu = () => {
   const dispatch = useDispatch();
   const user = useSelector(selectUser);
 
@@ -16,7 +16,7 @@ export const User = () => {
       <button
         type="button"
         onClick={() =>
-          dispatch(logout()).unwrap.then(toast.success('Goodbye!'))
+          dispatch(logOut()).unwrap.then(toast.success('Goodbye!'))
         }
         className={css.logoutButton}
         aria-label="Logout"
