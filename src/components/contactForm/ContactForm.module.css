@@ -30,12 +30,13 @@
 @media (min-width: 768px) {
   .form {
     flex-direction: row;
+    max-width: 650px;
   }
 }
 
 .input {
   border-radius: 6px;
-
+  border: 1px #ff4081 solid;
   padding: 12px;
 }
 
@@ -49,4 +50,5 @@
   flex-direction: column;
   align-items: start;
   height: 90px;
+  max-width: 195px;
 }

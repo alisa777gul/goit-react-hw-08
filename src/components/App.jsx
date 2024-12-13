@@ -27,7 +27,7 @@ function App() {
   return isRefreshing ? (
     <Loader />
   ) : (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Loader />}>
       <Toaster
         position="top-center"
         reverseOrder={false}

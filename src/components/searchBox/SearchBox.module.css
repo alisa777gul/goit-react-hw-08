@@ -10,7 +10,7 @@
 .input {
   border-radius: 6px;
   width: 180px;
+  border: 1px #ff4081 solid;
   display: flex;
   padding: 12px;
-  margin-bottom: 16px;
 }

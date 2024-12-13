@@ -50,7 +50,6 @@ button:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-
 .input {
   background-color: var(--input-background-color);
   border: 2px solid var(--border-color);
@@ -68,7 +67,6 @@ button:hover {
   box-shadow: 0 0 5px var(--highlight-color);
 }
 
-
 .label {
   font-size: 16px;
   margin-bottom: 6px;
@@ -78,7 +76,6 @@ button:hover {
 p {
   color: black;
 }
-
 
 .error {
   color: var(--error-color);
