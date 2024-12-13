@@ -1,6 +1,7 @@
 import { Suspense, useState, useEffect } from 'react';
 import Header from './header/Header';
 import './App.css';
+import Loader from './loader/Loader';
 
 export const Layout = ({ children }) => {
   const [currentTheme, setCurrentTheme] = useState(
@@ -15,7 +16,7 @@ export const Layout = ({ children }) => {
   return (
     <div className={`layout ${currentTheme}`}>
       <Header setCurrentTheme={setCurrentTheme} currentTheme={currentTheme} />
-      <Suspense fallback={null}>
+      <Suspense fallback={<Loader />}>
         <div className="layoutContent">{children}</div>
       </Suspense>
     </div>

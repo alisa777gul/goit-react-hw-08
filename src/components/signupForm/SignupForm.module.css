@@ -8,7 +8,7 @@
   border: 2px solid #ff4081;
   border-radius: 6px;
   min-width: 210px;
-  max-width: 360px;
+  width: 300px;
   padding: 20px;
   display: flex;
   justify-content: center;
@@ -36,6 +36,7 @@
   flex-direction: column;
   align-items: start;
   width: 100%;
+  height: 80px;
 }
 
 .title {
