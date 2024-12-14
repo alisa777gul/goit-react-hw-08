@@ -1,12 +1,19 @@
 import { useSelector } from 'react-redux';
 import Contact from '../contact/Contact';
 import styles from './ContactList.module.css';
-import { selectFilteredContacts } from '../../redux/contacts/selectors';
+import {
+  selectFilteredContacts,
+  selectIsLoading,
+} from '../../redux/contacts/selectors';
 
 export default function ContactList() {
   const filteredContacts = useSelector(selectFilteredContacts);
+  const isLoading = useSelector(selectIsLoading);
 
-  if (!filteredContacts || filteredContacts.length === 0) {
+  if (
+    (!filteredContacts && !isLoading) ||
+    (filteredContacts.length === 0 && !isLoading)
+  ) {
     return <p>No contacts available</p>;
   }
 
