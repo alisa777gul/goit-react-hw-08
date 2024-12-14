@@ -5,7 +5,6 @@ import * as Yup from 'yup';
 import style from './ContactForm.module.css';
 import { nanoid } from 'nanoid/non-secure';
 import { addContact } from '../../redux/contacts/operations';
-import toast from 'react-hot-toast';
 
 export default function ContactForm() {
   const dispatch = useDispatch();
@@ -20,11 +19,10 @@ export default function ContactForm() {
     )
       .unwrap()
       .then(() => {
-        toast.success('Contact was successfully added!');
         resetForm();
       })
-      .catch(() => {
-        toast.error('Try again...');
+      .catch(e => {
+        console.log(e.message);
       });
   };
 

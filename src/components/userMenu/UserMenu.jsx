@@ -3,7 +3,6 @@ import { logOut } from '../../redux/auth/operations';
 import { selectUser } from '../../redux/auth/selectors';
 import { FaSignOutAlt } from 'react-icons/fa';
 import css from './UserMenu.module.css';
-import toast from 'react-hot-toast';
 
 export const UserMenu = () => {
   const dispatch = useDispatch();
@@ -15,9 +14,7 @@ export const UserMenu = () => {
 
       <button
         type="button"
-        onClick={() =>
-          dispatch(logOut()).unwrap.then(toast.success('Goodbye!'))
-        }
+        onClick={() => dispatch(logOut())}
         className={css.logoutButton}
         aria-label="Logout"
       >

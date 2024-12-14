@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 export const goitApi = axios.create({
   baseURL: 'https://connections-api.goit.global',
@@ -19,8 +20,10 @@ export const register = createAsyncThunk(
     try {
       const response = await goitApi.post('/users/signup', credentials);
       setAuthHeader(response.data.token);
+      toast.success('Successfully registered!');
       return response.data;
     } catch (e) {
+      toast.error('Try again...');
       return thunkAPI.rejectWithValue(e.message);
     }
   }
@@ -32,8 +35,10 @@ export const login = createAsyncThunk(
     try {
       const response = await goitApi.post('/users/login', credentials);
       setAuthHeader(response.data.token);
+      toast.success('Successfully logged in!');
       return response.data;
     } catch (e) {
+      toast.error('Try again...');
       return thunkAPI.rejectWithValue(e.message);
     }
   }
@@ -43,8 +48,10 @@ export const logOut = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
   try {
     const response = await goitApi.post('/users/logout');
     clearAuthHeader();
+    toast.success('Goodbye!');
     return response.data;
   } catch (e) {
+    toast.error('Try again...');
     return thunkAPI.rejectWithValue(e.message);
   }
 });
@@ -56,7 +63,7 @@ export const refreshUser = createAsyncThunk(
     const persistedToken = state.auth.token;
 
     if (!persistedToken) {
-      return thunkAPI.rejectWithValue('unable to fetch user');
+      return thunkAPI.rejectWithValue('Unable to fetch user');
     }
 
     try {
@@ -64,6 +71,7 @@ export const refreshUser = createAsyncThunk(
       const response = await goitApi.get('/users/current');
       return response.data;
     } catch (e) {
+      toast.error('Try again...');
       return thunkAPI.rejectWithValue(e.message);
     }
   }

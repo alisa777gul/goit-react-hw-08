@@ -4,7 +4,6 @@ import { Field, Form, Formik, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import style from './RegistrationForm.module.css';
 import { useId } from 'react';
-import toast from 'react-hot-toast';
 
 export default function RegistrationForm() {
   const dispatch = useDispatch();
@@ -12,8 +11,12 @@ export default function RegistrationForm() {
   const handleSubmit = (values, { resetForm }) => {
     dispatch(register(values))
       .unwrap()
-      .then(() => toast.success('Successfully signed up!'))
-      .catch(() => toast.error('Something went wrong...'));
+      .then(() => {
+        console.log('Success');
+      })
+      .catch(e => {
+        console.log(e.message);
+      });
     resetForm();
   };
 
